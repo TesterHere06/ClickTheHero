@@ -30,17 +30,7 @@ public class Game : MonoBehaviour
 
     private void Update()
     {
-        ScoreText.text = Score + "$";
-    }
-
-    public void ShowAndHideUpgradePan()
-    {
-        UpgradePanel.SetActive(!UpgradePanel.activeSelf);
-    }
-
-    public void ShowAndHideShopPan()
-    {
-        ShopPanel.SetActive(!ShopPanel.activeSelf);
+        ScoreText.text = Score + "";
     }
 
     public void OnClickBuyLevel()
