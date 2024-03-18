@@ -26,11 +26,17 @@ public class Game : MonoBehaviour
     public void OnClickButton()
     {
         Score += ClickScore;
+        Debug.Log("Очки: " + Score);
     }
 
     private void Update()
     {
         ScoreText.text = Score + "";
+        if (Input.GetKeyUp(KeyCode.U))
+        {
+            Debug.Log("Удвоили прибыль!");
+            ClickScore *= 2;
+        }
     }
 
     public void OnClickBuyLevel()
